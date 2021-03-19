@@ -1,0 +1,11 @@
+[MASTER]
+disable=missing-docstring,too-few-public-methods
+
+[FORMAT]
+max-line-length=140
+
+[REPORTS]
+output-format=colorized
+
+[TYPECHECK]
+ignored-modules=dpkt
