@@ -12,6 +12,10 @@ from jnx_bits.mdrop.bitfields import (
 
 class MdropMessageMixin(ApplicationMessageMixin):
     def real_timestamp(self):
+        """
+        This only produces the correct result right after message instance creation.
+        Calling it at different times during the day will yield different results.
+        """
         return (MdSeconds.last_second * 1_000_000_000) + self.timestamp
 
 
