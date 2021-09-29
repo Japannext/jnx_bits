@@ -1,3 +1,8 @@
+#
+# Copyright: Japannext Co., Ltd. <https://www.japannext.co.jp/>
+# SPDX-License-Identifier: Apache-2.0
+#
+
 from jnx_bits.mdrop.messages import MDROP_MSG_TYPES
 
 _msg_types = MDROP_MSG_TYPES.copy()

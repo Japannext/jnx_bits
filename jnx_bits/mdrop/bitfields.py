@@ -1,3 +1,8 @@
+#
+# Copyright: Japannext Co., Ltd. <https://www.japannext.co.jp/>
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # TODO: check whether it's faster with BitStream.
 
 from dataclasses import dataclass

@@ -1,3 +1,8 @@
+#
+# Copyright: Japannext Co., Ltd. <https://www.japannext.co.jp/>
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # pylint: disable=too-many-instance-attributes, too-few-public-methods
 
 from struct import Struct
