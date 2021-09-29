@@ -125,7 +125,7 @@ class ItchOrderExecuted(ItchMessageMixin):
     msg_struct = Struct('>cIQIQ')
     message_type: str
     timestamp: int
-    order_no: int
+    order_number: int
     executed_quantity: int
     match_number: int
 
@@ -135,7 +135,7 @@ class ItchOrderDeleted(ItchMessageMixin):
     msg_struct = Struct('>cIQ')
     message_type: str
     timestamp: int
-    order_no: int
+    order_number: int
 
 
 @dataclass
@@ -143,8 +143,8 @@ class ItchOrderReplaced(ItchMessageMixin):
     msg_struct = Struct('>cIQQII')
     message_type: str
     timestamp: int
-    orig_order_no: int
-    new_order_no: int
+    orig_order_number: int
+    new_order_number: int
     quantity: int
     price: int
 

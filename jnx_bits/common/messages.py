@@ -1,3 +1,4 @@
+import json
 class ApplicationMessageMixin:
     @classmethod
     def from_bytes(cls, bytes_):
@@ -15,4 +16,4 @@ class ApplicationMessageMixin:
         pass
 
     def to_json(self):
-        return str(vars(self))
+        return json.dumps(vars(self))
