@@ -8,6 +8,6 @@ It can be used to easily translate the binary files into readable JSON for examp
 
     python3 -mvenv env
     ./env/bin/pip install --upgrade pip
-    ./env/bin/pip install dataclasses # for python < 3.7
+    ./env/bin/python -mdataclasses &>/dev/null || ./env/bin/pip install dataclasses # No need to install in Python > 3.6
     ./env/bin/pip install .
     ./env/bin/python examples/...

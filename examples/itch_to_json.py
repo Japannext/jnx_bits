@@ -9,6 +9,12 @@ import jnx_bits.itch
 from datetime import datetime
 import json
 
+if len(sys.argv) <= 1:
+    print(f"Usage: {sys.argv[0]} ITCHTV.log", file=sys.stderr)
+    print(f"", file=sys.stderr)
+    print(f"Where ITCHTV.log is the binary ITCH log file", file=sys.stderr)
+    sys.exit(0)
+
 with jnx_bits.soupbin.file.SoupBinFile(sys.argv[1]) as soupbin:
     for msg in soupbin:
         if msg:

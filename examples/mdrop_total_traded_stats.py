@@ -40,6 +40,11 @@ def trade_report_hook(self):
 
 MdTradeReport.hook = trade_report_hook
 
+if len(sys.argv) <= 1:
+    print(f"Usage: {sys.argv[0]} MDROP.log", file=sys.stderr)
+    print(f"", file=sys.stderr)
+    print(f"Where MDROP.log is the binary MDROP log file", file=sys.stderr)
+    sys.exit(0)
 
 with SoupBinFile(sys.argv[1]) as soupbin:
     for msg in soupbin:
