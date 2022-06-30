@@ -21,4 +21,4 @@ class ApplicationMessageMixin:
         pass
 
     def to_json(self):
-        return json.dumps(vars(self))
+        return json.dumps( { "msg_type_name": self.__class__.__name__, **vars(self) }, default = lambda o: o.__dict__)
